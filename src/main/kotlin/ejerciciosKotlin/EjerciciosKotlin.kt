@@ -48,8 +48,7 @@ fun ejercicio2() {
  * Pedir al usuario el radio de un círculo y calcular su área (A = π * r^2).
  */
 fun ejercicio3() {
-    var r = pedirNumeroPositivo(">> Introduce un número positivo: ")
-
+    val r = pedirNumeroPositivo(">> Introduce un número positivo: ")
     println("El área de este círculo es de ${(Math.PI * (r * r))}")
 }
 
@@ -142,7 +141,18 @@ fun ejercicio8() {
  */
 fun ejercicio9() {
     val num = pedirNumeroPositivo(">> Introduce un número positivo: ").toInt()
+    var esPrimo = num % 2 != 0
 
+    var i = 3
+    while (i * i <= num) {
+        if (num % i == 0) {
+            esPrimo = false
+        }
+        i += 2
+    }
+
+    if (esPrimo) println("Es primo")
+    else println("No es primo")
 }
 
 /**
@@ -170,11 +180,12 @@ fun ejercicio11() {
     val n = pedirNumeroPositivo(">> Introduce un número positivo: ").toInt()
     var f = 0
     var f2 = 1
+    var m = 0
     for (i in 1..n) {
-        println(f)
-        println(f2)
-        f += f2
-        f2 += f
+        println(m)
+        m = f + f2
+        f = f2
+        f2 = m
     }
 }
 
