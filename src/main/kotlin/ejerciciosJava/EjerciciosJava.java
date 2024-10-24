@@ -266,11 +266,6 @@ public class EjerciciosJava {
 
     }
 
-    public static void main(String[] args) {
-        EjerciciosJava ejercicio = new EjerciciosJava();
-        ejercicio.ejercicio9();
-    }
-
 
 }
 
