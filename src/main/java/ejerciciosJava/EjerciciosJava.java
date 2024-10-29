@@ -1,8 +1,6 @@
 package ejerciciosJava;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -47,7 +45,7 @@ public class EjerciciosJava {
         int num = pedirNum(">> Introduce un número positivo: ");
 
         if (num % 2 == 0) System.out.println("El número es par");
-        else System.out.println("El número es ");
+        else System.out.println("El número es impar");
 
     }
 
@@ -221,9 +219,9 @@ public class EjerciciosJava {
      */
     public void ejercicio12() {
         int num = pedirNum(">> Introduce un número positivo: ");
-        StringBuilder sb = new StringBuilder(num);
+        StringBuilder sb = new StringBuilder(String.valueOf(num));
 
-        System.out.println("El número invertido es: " + (sb.reverse()));
+        System.out.println("El número invertido es: " + sb.reverse());
     }
 
 
@@ -263,6 +261,8 @@ public class EjerciciosJava {
         user.mostrarJuego();
 
         user.eliminarJuego(juego2);
+
+        user.mostrarJuego();
 
     }
 
